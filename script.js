@@ -165,12 +165,6 @@ const memories = [
     text: "I love growing with you bub, and there's nothing more tangible than exercising and getting stronger together! We will run a marathon together one day!"
   },
   {
-    title: "Christmas Market",
-    subtitle: "Tiny Toms was a little mid, but at least we had it together hehe",
-    image: "images/IMG_9879.JPEG",
-    text: "This was one of our first Christmas markets together! It was definitely worth the drive, it felt more special seeing the lights and feeling the festivity next to you"
-  },
-  {
     title: "Gilbert",
     subtitle: "Our son",
     image: "images/IMG_0606.JPG",
@@ -215,6 +209,12 @@ const memories = [
     text: "While i think yours look better, mine is definitely better in general hehe"
   }
   ,
+  {
+    title: "Christmas Market",
+    subtitle: "Tiny Toms was a little mid, but at least we had it together hehe",
+    image: "images/IMG_9879.JPEG",
+    text: "This was one of our first Christmas markets together! It was definitely worth the drive, it felt more special seeing the lights and feeling the festivity next to you"
+  },
   {
     title: "WE DID IT!",
     subtitle: "One of our proudest moments",
