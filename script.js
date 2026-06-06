@@ -35,7 +35,7 @@ const memories = [
   {
     title: "In the Beginning",
     subtitle: "reference to meme 'In dah begingin...'",
-    image: "images/IMG_8613.jpg",
+    image: "images/IMG_8613.JPG",
     text: "This was where our story started bub, one of our first walks where we walked to Lincoln park"
   },
   {
