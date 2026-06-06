@@ -166,8 +166,8 @@ const memories = [
   },
   {
     title: "Christmas Market",
-    subtitle: "Tiny Toms was a little mid",
-    image: "images/IMG_9879.jpeg",
+    subtitle: "Tiny Toms was a little mid, but at least we had it together hehe",
+    image: "images/IMG_9879.JPEG",
     text: "This was one of our first Christmas markets together! It was definitely worth the drive, it felt more special seeing the lights and feeling the festivity next to you"
   },
   {
