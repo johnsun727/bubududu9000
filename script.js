@@ -295,7 +295,7 @@ const memories = [
 */
 const sunsetPhotos = [
   {
-    image: "images/sunset1.jpg",
+    image: "images/sunset1.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
@@ -307,15 +307,15 @@ const sunsetPhotos = [
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset4.jpg",
+    image: "images/sunset4.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset5.jpg",
+    image: "images/sunset5.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset6.jpg",
+    image: "images/sunset6.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
@@ -327,7 +327,7 @@ const sunsetPhotos = [
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset9.jpg",
+    image: "images/sunset9.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
@@ -339,27 +339,27 @@ const sunsetPhotos = [
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset12.jpg",
+    image: "images/sunset12.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset13.jpg",
+    image: "images/sunset13.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset14.jpg",
+    image: "images/sunset14.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset15.jpg",
+    image: "images/sunset15.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset16.jpg",
+    image: "images/sunset16.JPG",
     caption: "Sunset placeholder caption one."
   },
   {
-    image: "images/sunset17.jpg",
+    image: "images/sunset17.JPG",
     caption: "Sunset placeholder caption one."
   }
 
