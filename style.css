@@ -1,0 +1,442 @@
+/* 
+  ANNIVERSARY SURPRISE WEBSITE
+  Edit this file to change the look and feel.
+*/
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #071827;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Hide main page before the button is clicked */
+.hidden {
+  display: none;
+}
+
+/* 
+  FAKE LANDING PAGE
+  Intentionally ugly/basic/funny.
+  There is almost no styling here on purpose.
+*/
+#fakeLanding {
+  color: black;
+  background: white;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Times New Roman, serif;
+}
+
+#fakeLanding button {
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+/* Main experience wrapper */
+#mainExperience {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* 
+  DYNAMIC BLURRED BACKGROUND
+  JS changes the image.
+*/
+#backgroundBlur {
+  position: fixed;
+  inset: -80px;
+  background-image: url("images/memory-1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(10px);
+  transform: scale(1.10);
+
+  opacity: 0.35;
+  transition: background-image 0.8s ease, opacity 0.8s ease;
+  z-index: -3;
+}
+
+.backgroundOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 24, 39, 0.72);
+  z-index: -2;
+}
+
+/* Intro title section */
+.intro-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  position: relative;
+}
+
+.intro-content {
+  width: min(900px, 100%);
+  text-align: center;
+  position: relative;
+}
+
+.intro-kicker {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 18px;
+}
+
+.intro-title {
+  font-size: clamp(3.2rem, 11vw, 8.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  margin-bottom: 20px;
+}
+
+.intro-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Optional cute stickers on intro section */
+.intro-sticker {
+  position: absolute;
+  width: clamp(80px, 15vw, 150px);
+  opacity: 0.94;
+  filter: drop-shadow(0 16px 35px rgba(0, 0, 0, 0.35));
+  animation: floaty 4s ease-in-out infinite;
+}
+
+.sticker-one {
+  left: -20px;
+  top: -90px;
+  transform: rotate(-8deg);
+  width: 300px;
+}
+
+.sticker-two {
+  right: -20px;
+  bottom: -120px;
+  transform: rotate(8deg);
+  animation-delay: 1s;
+}
+
+@keyframes floaty {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+
+/* Memory sections */
+.memories-container {
+  width: min(1150px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 100px;
+}
+
+.memory-section {
+  min-height: 92vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 5vw, 70px);
+  align-items: center;
+  padding: 80px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.memory-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternating layout */
+.memory-section.reverse .memory-photo-wrap {
+  order: 2;
+}
+
+.memory-section.reverse .memory-text-card {
+  order: 1;
+}
+
+.memory-photo-wrap {
+  position: relative;
+}
+
+.memory-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.memory-text-card {
+  padding: clamp(24px, 4vw, 46px);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.memory-number {
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 14px;
+}
+
+.memory-text-card h2 {
+  font-size: clamp(2rem, 5vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin-bottom: 16px;
+}
+
+.memory-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+  font-style: italic;
+  margin-bottom: 22px;
+  font-size: 1.05rem;
+}
+
+.memory-body {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+/* Section headings */
+.section-heading {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 14px;
+}
+
+.section-heading h2,
+.closing-card h2 {
+  font-size: clamp(2.4rem, 7vw, 5.4rem);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  margin-bottom: 20px;
+}
+
+.section-heading p,
+.closing-card p {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.8;
+}
+
+/* Sunset picture-book carousel */
+.sunset-section {
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+.sunset-carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 30px max(24px, calc((100vw - 920px) / 2));
+}
+
+.sunset-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.sunset-carousel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+}
+
+.sunset-card {
+  flex: 0 0 min(72vw, 560px);
+  scroll-snap-align: center;
+  transform: scale(0.92);
+  transition: transform 0.35s ease;
+}
+
+.sunset-card:hover {
+  transform: scale(1);
+}
+
+.sunset-card img {
+  width: 100%;
+  height: min(62vh, 560px);
+  object-fit: cover;
+  border-radius: 34px;
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sunset-caption {
+  margin-top: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.78);
+  font-style: italic;
+}
+
+/* Closing */
+.closing-section {
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  padding: 80px 24px;
+}
+
+.closing-card {
+  width: min(780px, 100%);
+  text-align: center;
+  padding: clamp(30px, 5vw, 60px);
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.japan-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 100px 24px;
+}
+
+.japan-card {
+  width: min(950px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+  padding: clamp(24px, 4vw, 46px);
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.japan-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.japan-text h2 {
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin-bottom: 20px;
+}
+
+.japan-text p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+  .intro-section {
+    padding: 24px;
+  }
+
+  .intro-title {
+    font-size: clamp(3.2rem, 18vw, 5.6rem);
+  }
+
+  .intro-sticker {
+    width: 86px;
+  }
+
+  .sticker-one {
+    left: 0;
+    top: -105px;
+  }
+
+  .sticker-two {
+    right: 0;
+    bottom: -115px;
+  }
+
+  .memory-section,
+  .memory-section.reverse {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 56px 0;
+  }
+
+  .memory-section.reverse .memory-photo-wrap,
+  .memory-section.reverse .memory-text-card {
+    order: initial;
+  }
+
+  .memory-photo {
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+  }
+
+  .memory-text-card {
+    border-radius: 24px;
+  }
+
+  .memory-text-card h2 {
+    font-size: clamp(2rem, 11vw, 3.3rem);
+  }
+
+  .sunset-card {
+    flex-basis: 82vw;
+  }
+
+  .sunset-card img {
+    height: 430px;
+  }
+.japan-card {
+  grid-template-columns: 1fr;
+  border-radius: 24px;
+}
+
+.japan-card img {
+  height: 500px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 22px;
+  display: block;
+  margin: 0 auto;
+}
+}

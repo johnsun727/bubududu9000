@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuBu DuDu 9000</title>
+
+  <!-- This links your CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 
+    FAKE LANDING PAGE
+    This section is intentionally ugly/basic/funny.
+    She sees this first before clicking the surprise button.
+  -->
+  <div id="fakeLanding">
+    <h1>hello bub!</h1>
+    <h1>welcome to my gift to you</h1>
+    <div>i hope you enjoy <3</div>
+    <div>i love you</div>
+    <br />
+    <button id="surpriseBtn">click for gift</button>
+  </div>
+
+  <!-- 
+    MAIN EXPERIENCE
+    Hidden at first. Appears after the button is clicked.
+  -->
+  <main id="mainExperience" class="hidden">
+    <!-- 
+      BACKGROUND BLUR LAYERS
+      JS will update this background based on the current memory image.
+    -->
+    <div id="backgroundBlur"></div>
+    <div class="backgroundOverlay"></div>
+
+    <!-- 
+      MUSIC
+      Add your own music file inside the /audio folder.
+      Example: audio/anniversary-song.mp3
+      Then change the src below.
+      Note: Music starts after button click because browsers block autoplay.
+    -->
+    <audio id="bgMusic" loop>
+      <source src="audio/canon in d.mp4" type="audio/mpeg" />
+    </audio>
+
+    <!-- 
+      FULL SCREEN INTRO TITLE
+      Text and stickers are generated from script.js.
+    -->
+    <section id="introSection" class="intro-section">
+      <div id="introContent" class="intro-content"></div>
+    </section>
+
+    <!-- 
+      MEMORY SECTIONS
+      All memory sections are generated from the memories array in script.js.
+    -->
+    <section id="memoriesContainer" class="memories-container"></section>
+
+    <!-- 
+      SUNSET SECTION
+      Sunset carousel is generated from the sunsetPhotos array in script.js.
+    -->
+    <section class="sunset-section">
+      <div class="section-heading">
+        <p class="eyebrow">A collection of sunsets</p>
+        <h2>Sunsets We Saw Together</h2>
+        <p>
+          Sunsets have been more beautiful when we can look at it together.
+        </p>
+      </div>
+
+      <div id="sunsetCarousel" class="sunset-carousel"></div>
+    </section>
+
+    <!-- 
+      FINAL CLOSING MESSAGE
+      Change this directly here or move it into script.js later.
+    -->
+    <section class="closing-section">
+      <div class="closing-card">
+        <p class="eyebrow">To My Favourite Bub Of All Time</p>
+        <h2>Thank you for being my favourite part of every day. <br>I love you 9000</h2>
+        <p>
+          Oh my goodness bub bub, can you believe it has been a year already. You know what they say - time flies when you're having fun
+          and it's been such a fun year with you. We did so many things together and made so many memories. This is my offcial
+          offer for you to extend the subscription. I love you very much bub. Thank you for putting up with me for the past year, through
+          thick and thin. Thank you for showing me what the world looks like. Thank you for looking after me when i'm feeling unwell. And thank
+          you for trying to learn to support me and love me the way that i want you to. Life has been a little easier with you next to me,
+          someone who i can rely on when the days are gloomy and someone to share a laugh with during the good times. Here is to many many more 
+          years to come. We will continue to grow together, laugh together, and win together. I am very excited about our trip to Japan this year,
+          and this is only the beginning. Soon we will conquer the world! You are the best bub bub, and I hope we will continue to love each other,
+          learn about each other, and share this thing we call life :D I love you 9000.
+          <br>
+          <br>
+          P.S You still owe me a lot of buckets bub, and I will never forget this.
+        </p>
+      </div>
+    </section>
+    <section class="japan-section">
+  <div class="japan-card">
+    <!-- CHANGE THIS IMAGE to your Japan planning photo -->
+    <img src="images/IMG_3883.PNG" alt="Us planning for Japan" />
+
+    <div class="japan-text">
+      <p class="eyebrow">Our next adventure</p>
+      <h2>Looking Forward To Our Next Conquest.</h2>
+      <p>
+       Japan is not ready for us heheheHAHAHAHAH
+      </p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- This links your JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
